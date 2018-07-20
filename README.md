@@ -3,11 +3,8 @@
 使用步骤
 ## python 环境
 ## 安装Python依赖aircv，opencv及其依赖
-     ``` 
-     pip install aircv
-     pip install opencv-python
-     
-     ```
+     ``` pip install aircv
+     pip install opencv-python```
 ## Android 配置步骤
 - 手机打开开发者模式，打开调试数据线连接电脑
 - 打开android.py找到adb_path替换成你本机的android adk目录中{你的sdk路径}/platform-tools/adb
