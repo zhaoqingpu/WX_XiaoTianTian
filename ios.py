@@ -9,10 +9,17 @@ import random
 
 driver = wda.Client()
 session = driver.session()
+scale = 2
+init = False
 
 def matchImg(imgsrc,imgobj,confidence=0.7):
     imsrc = ac.imread(imgsrc)
     imobj = ac.imread(imgobj)
+        if(init==False):
+            global init
+            init = True
+            width =imsrc.shape[1]
+            scale = width/session.window_size()[0]
     match_result = ac.find_template(imsrc,imobj,confidence)
     if match_result is not None:
         match_result['shape']=(imsrc.shape[1],imsrc.shape[0])
@@ -26,7 +33,7 @@ def tab(x, y):
     x = x+rdm(6)
     y = y+rdm(8)
     print(str(x)+"_"+str(y))
-    session.tap(x/2, y/2)
+    session.tap(x/scale, y/scale)
 
 def rdm(x):
     return int(random.random()*x-x/2)
