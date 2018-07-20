@@ -22,7 +22,7 @@ def screenshot():
 
 
 def runAdb(cmd):
-    adb_path = "/Users/zhaoqingpu/Library/Android/sdk/platform-tools/adb"
+    adb_path = "/Users/xxxxx/Library/Android/sdk/platform-tools/adb"
     print(adb_path+" "+cmd)
     #pipe = subprocess.Popen(adb_path+" "+cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     process = os.popen(adb_path+" "+cmd)
