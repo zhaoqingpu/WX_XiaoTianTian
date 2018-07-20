@@ -1,7 +1,7 @@
 # WX_XiaoTianTian
 微信小田田游戏点地鼠辅助
 使用步骤
-## python 环境
+## python 环境(我的环境是2.7.10，其他版本没有测试，最好使用2.7系列版本)
 - 安装Python依赖aircv，opencv及其依赖
 
       pip install aircv
